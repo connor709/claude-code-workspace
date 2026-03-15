@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nucleus Genomics — Meta Ad Creative Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#f8f7f4;color:#1a1a1a;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+
+/* ===== BRAND TOKENS ===== */
+:root{
+  --cream:#fcfbf3;--warm:#f5f2e6;--beige:#ece9d9;
+  --dark:#1a1a1a;--dark-mid:#242424;--dark-soft:#333;
+  --gold:#fdd17c;--gold-dark:#e8b84a;
+  --olive:#8e8564;--teal:#719c9e;--green:#d3dac9;
+  --blue:#4f6df5;--red-soft:#e85d5d;
+  --white:#ffffff;--muted:#6b6b6b;--light-muted:#999;
+  --radius:16px;--radius-sm:10px;--radius-pill:500px;
+}
+
+/* ===== PAGE HEADER ===== */
+.page-header{background:var(--dark);color:var(--white);padding:60px 0 48px;text-align:center}
+.page-header h1{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:12px}
+.page-header p{color:rgba(255,255,255,.55);font-size:1rem;max-width:600px;margin:0 auto}
+.page-header .brand-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);padding:8px 20px;border-radius:var(--radius-pill);font-size:.8rem;font-weight:600;color:var(--gold);margin-bottom:20px}
+
+/* ===== CONTAINER ===== */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ===== SECTION HEADERS ===== */
+.section-header{padding:56px 0 32px;border-bottom:1px solid rgba(0,0,0,.08);margin-bottom:40px}
+.section-header h2{font-size:1.6rem;font-weight:700;letter-spacing:-0.02em}
+.section-header p{color:var(--muted);margin-top:8px;font-size:.95rem}
+
+/* ===== AD CARD ===== */
+.ad-card{background:var(--white);border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);overflow:hidden;margin-bottom:48px;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+.ad-card-inner{display:grid;grid-template-columns:1fr 1fr;min-height:540px}
+.ad-card-inner.reverse .ad-image{order:2}
+.ad-card-inner.reverse .ad-copy{order:1}
+
+/* ===== AD IMAGE (the 1:1 creative) ===== */
+.ad-image{position:relative;background:var(--cream);display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:540px}
+.ad-image .creative{width:100%;height:100%;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px}
+
+/* ===== TAG PILLS ===== */
+.tags{position:absolute;top:16px;left:16px;display:flex;gap:8px;z-index:10;flex-wrap:wrap}
+.tag{padding:5px 14px;border-radius:var(--radius-pill);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.tag-cold{background:#dbeafe;color:#1e40af}
+.tag-consideration{background:#fef3c7;color:#92400e}
+.tag-mid{background:#d1fae5;color:#065f46}
+.tag-bottom{background:#fce7f3;color:#9d174d}
+.tag-education{background:#e0e7ff;color:#3730a3}
+.tag-product{background:var(--dark);color:var(--white)}
+
+/* ===== AD COPY PANEL ===== */
+.ad-copy{padding:40px;display:flex;flex-direction:column;justify-content:center}
+.ad-copy .ad-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--olive);margin-bottom:16px}
+.ad-copy h3{font-size:1.35rem;font-weight:700;letter-spacing:-0.01em;margin-bottom:20px;line-height:1.3}
+.ad-copy-fields{display:flex;flex-direction:column;gap:16px;margin-bottom:28px}
+.field-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--light-muted);margin-bottom:4px}
+.field-value{font-size:.9rem;color:var(--dark-soft);line-height:1.5}
+.field-value.headline{font-size:1.05rem;font-weight:600;color:var(--dark)}
+.field-value.cta-text{display:inline-flex;align-items:center;gap:6px;padding:8px 20px;background:var(--dark);color:var(--white);border-radius:var(--radius-pill);font-size:.8rem;font-weight:600;width:fit-content}
+.deep-link{font-size:.75rem;color:var(--blue);word-break:break-all;margin-top:4px}
+
+/* ===== SAVE IMAGE BUTTON ===== */
+.save-btn{display:block;width:100%;padding:14px;background:var(--dark);color:var(--white);border:none;border-radius:0 0 var(--radius) 0;font-family:'Inter',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;transition:background .2s;text-align:center;border-top:1px solid rgba(0,0,0,.06)}
+.save-btn:hover{background:var(--dark-mid)}
+.save-btn-img{border-radius:0;border-top:1px solid rgba(0,0,0,.08)}
+
+/* ===== CREATIVE STYLES — per ad ===== */
+
+/* Ad 5: Quiz — warm photo bg */
+.creative-quiz{background:linear-gradient(135deg,#f5f0e3 0%,#e8e0cc 100%);position:relative}
+.creative-quiz .overlay-text{position:relative;z-index:2}
+.creative-quiz h2{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--dark);margin-bottom:16px;line-height:1.15}
+.creative-quiz p{font-size:1rem;color:var(--muted);max-width:380px;margin:0 auto 28px;line-height:1.5}
+.creative-quiz .quiz-cta{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--dark);color:var(--white);border-radius:var(--radius-pill);font-size:.95rem;font-weight:600}
+.creative-quiz .quiz-cta .arrow{font-size:1.1rem}
+.creative-quiz .photo-strip{position:absolute;bottom:0;left:0;right:0;height:220px;overflow:hidden;border-radius:20px 20px 0 0;margin:0 24px}
+.creative-quiz .photo-strip img{width:100%;height:100%;object-fit:cover}
+.creative-quiz .nucleus-logo{position:absolute;top:20px;left:20px;display:flex;align-items:center;gap:6px;font-weight:700;font-size:.9rem;color:var(--dark)}
+.creative-quiz .nucleus-logo svg{width:22px;height:22px}
+
+/* Ad 6: WSJ Quote — dark editorial */
+.creative-wsj{background:var(--dark);color:var(--white);padding:48px;text-align:left;align-items:flex-start;justify-content:center}
+.creative-wsj .quote-mark{font-family:'Playfair Display',serif;font-size:8rem;line-height:.7;color:var(--gold);margin-bottom:12px;display:block}
+.creative-wsj blockquote{font-family:'Playfair Display',serif;font-size:1.75rem;line-height:1.3;font-style:italic;color:var(--white);margin-bottom:20px;max-width:420px}
+.creative-wsj .attribution{font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:32px;font-weight:500}
+.creative-wsj .sub-copy{font-size:.95rem;color:rgba(255,255,255,.65);margin-bottom:28px}
+.creative-wsj .logo-row-wsj{display:flex;align-items:center;gap:16px}
+.creative-wsj .nucleus-mark{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.95rem;color:var(--white)}
+.creative-wsj .nucleus-mark svg{width:24px;height:24px}
+.creative-wsj .wsj-cta{padding:10px 24px;background:var(--gold);color:var(--dark);border-radius:var(--radius-pill);font-size:.85rem;font-weight:600}
+
+/* Ad 7: Number ad */
+.creative-number{background:var(--white);padding:48px;text-align:center}
+.creative-number .big-number{font-size:7rem;font-weight:900;letter-spacing:-0.05em;color:var(--dark);line-height:.9;margin-bottom:8px}
+.creative-number .big-number span{color:var(--gold)}
+.creative-number .label-top{font-size:1.15rem;color:var(--dark);font-weight:500;margin-bottom:8px}
+.creative-number .label-bottom{font-size:1rem;color:var(--muted);margin-bottom:32px;max-width:360px;margin-left:auto;margin-right:auto;line-height:1.5}
+.creative-number .contrast-line{font-size:1.05rem;font-weight:700;color:var(--red-soft);margin-bottom:32px}
+.creative-number .num-cta{padding:12px 28px;background:var(--dark);color:var(--white);border-radius:var(--radius-pill);font-size:.9rem;font-weight:600;display:inline-block}
+.creative-number .nucleus-sm{margin-top:24px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--muted)}
+.creative-number .nucleus-sm svg{width:18px;height:18px}
+
+/* Ad 8: Parent testimonial */
+.creative-testimonial{background:var(--cream);padding:40px;text-align:left;align-items:flex-start}
+.creative-testimonial .test-photo{width:100%;height:220px;object-fit:cover;border-radius:16px;margin-bottom:24px}
+.creative-testimonial blockquote{font-family:'Playfair Display',serif;font-size:1.15rem;line-height:1.5;font-style:italic;color:var(--dark);margin-bottom:20px}
+.creative-testimonial .test-name{font-size:.9rem;font-weight:700;color:var(--dark)}
+.creative-testimonial .test-role{font-size:.8rem;color:var(--muted)}
+.creative-testimonial .test-cta{display:inline-flex;align-items:center;gap:6px;padding:10px 24px;background:var(--dark);color:var(--white);border-radius:var(--radius-pill);font-size:.85rem;font-weight:600;margin-top:20px}
+
+/* Ad 9: Disease prevention */
+.creative-disease{background:var(--white);padding:48px;text-align:center;border:1px solid rgba(0,0,0,.04)}
+.creative-disease .stat-badge{display:inline-block;padding:8px 20px;background:#fef2f2;color:var(--red-soft);border-radius:var(--radius-pill);font-size:.8rem;font-weight:700;margin-bottom:24px}
+.creative-disease .headline-disease{font-size:1.3rem;font-weight:600;color:var(--dark);line-height:1.4;margin-bottom:20px;max-width:380px;margin-left:auto;margin-right:auto}
+.creative-disease .story-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;color:var(--muted);margin-bottom:8px;max-width:360px;margin-left:auto;margin-right:auto;line-height:1.5}
+.creative-disease .story-name{font-size:.85rem;font-weight:600;color:var(--dark);margin-bottom:28px}
+.creative-disease .dis-cta{padding:10px 24px;background:var(--dark);color:var(--white);border-radius:var(--radius-pill);font-size:.85rem;font-weight:600;display:inline-block}
+.creative-disease .nucleus-foot{margin-top:24px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--muted)}
+.creative-disease .nucleus-foot svg{width:18px;height:18px}
+
+/* Ad 10: Longevity reframe */
+.creative-longevity{background:linear-gradient(180deg,#f0ede4 0%,#e2ddd0 100%);padding:48px;text-align:center;position:relative}
+.creative-longevity .photo-bg{position:absolute;inset:0;overflow:hidden}
+.creative-longevity .photo-bg img{width:100%;height:100%;object-fit:cover;opacity:.25}
+.creative-longevity .longevity-content{position:relative;z-index:2}
+.creative-longevity h2{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--dark);margin-bottom:16px;line-height:1.15}
+.creative-longevity p{font-size:.95rem;color:var(--muted);max-width:380px;margin:0 auto 28px;line-height:1.5}
+.creative-longevity .long-cta{padding:12px 28px;background:var(--dark);color:var(--white);border-radius:var(--radius-pill);font-size:.9rem;font-weight:600;display:inline-block}
+.creative-longevity .nucleus-footer{margin-top:28px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:.85rem;font-weight:700;color:var(--dark)}
+.creative-longevity .nucleus-footer svg{width:20px;height:20px}
+
+/* ===== EXPORT SECTION ===== */
+.export-section{background:var(--white);border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);padding:48px;margin-top:60px;margin-bottom:60px}
+.export-section h2{font-size:1.5rem;font-weight:700;margin-bottom:8px;letter-spacing:-0.02em}
+.export-section>p{color:var(--muted);margin-bottom:32px}
+.export-section h3{font-size:1.1rem;font-weight:700;margin:32px 0 16px;padding-top:24px;border-top:1px solid rgba(0,0,0,.06)}
+.export-section h3:first-of-type{border-top:none;padding-top:0;margin-top:0}
+
+/* Table */
+.spec-table{width:100%;border-collapse:collapse;font-size:.85rem;margin-bottom:16px}
+.spec-table th{text-align:left;padding:10px 16px;background:var(--cream);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:2px solid rgba(0,0,0,.08)}
+.spec-table td{padding:10px 16px;border-bottom:1px solid rgba(0,0,0,.04);color:var(--dark-soft)}
+.spec-table tr:last-child td{border-bottom:none}
+.spec-table code{background:var(--cream);padding:2px 6px;border-radius:4px;font-size:.8rem}
+
+/* Steps list */
+.steps-list{list-style:none;counter-reset:step}
+.steps-list li{counter-increment:step;position:relative;padding:12px 0 12px 48px;font-size:.9rem;color:var(--dark-soft);border-bottom:1px solid rgba(0,0,0,.04)}
+.steps-list li:last-child{border-bottom:none}
+.steps-list li::before{content:counter(step);position:absolute;left:0;top:12px;width:32px;height:32px;border-radius:50%;background:var(--dark);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700}
+
+/* Audience cards */
+.audience-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:16px}
+.audience-card{background:var(--cream);border-radius:var(--radius-sm);padding:20px}
+.audience-card h4{font-size:.85rem;font-weight:700;margin-bottom:8px}
+.audience-card p{font-size:.8rem;color:var(--muted);line-height:1.5}
+
+/* UTM table */
+.utm-block{background:var(--cream);border-radius:var(--radius-sm);padding:20px;margin-top:16px;font-size:.8rem;font-family:monospace;white-space:pre-wrap;word-break:break-all;line-height:1.8;color:var(--dark-soft)}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .ad-card-inner{grid-template-columns:1fr}
+  .ad-card-inner.reverse .ad-image{order:1}
+  .ad-card-inner.reverse .ad-copy{order:2}
+  .ad-image{min-height:420px}
+  .page-header{padding:40px 0 32px}
+  .export-section{padding:28px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE HEADER ===== -->
+<header class="page-header">
+  <div class="container">
+    <div class="brand-tag">
+      <svg viewBox="0 0 40 40" fill="none" width="18" height="18"><path fill="#fdd17c" d="m21.466 5.071.004 10.915c.001 1.725-1.834 2.83-3.358 2.024L7.17 12.223a15.1 15.1 0 0 1 3.1-3.64l8.582 7.932c.455.42 1.172-.036.985-.626L16.509 5.41a15 15 0 0 1 4.956-.338M18.496 34.925l-.005-10.86c0-1.724 1.834-2.83 3.359-2.023l10.946 5.79a15 15 0 0 1-3.116 3.626l-8.57-7.921c-.455-.42-1.172.035-.985.625l3.316 10.441a15 15 0 0 1-4.945.322M23.492 18.898 31.44 10.3a15 15 0 0 0-3.64-3.113l-5.804 10.972c-.806 1.524.3 3.359 2.024 3.358l10.905-.005a15.2 15.2 0 0 0-.324-4.958l-10.484 3.33c-.59.187-1.045-.53-.625-.985M5.07 18.54l10.872-.004c1.725 0 2.83 1.834 2.024 3.358L12.192 32.81a15 15 0 0 1-3.627-3.103l7.906-8.553c.42-.455-.036-1.172-.626-.985L5.408 23.484a15 15 0 0 1-.337-4.943"/></svg>
+      Nucleus Genomics
+    </div>
+    <h1>Meta Ad Creative Gallery</h1>
+    <p>6 high-converting ad concepts with full copy, creative assets, and Meta Ads Manager export instructions.</p>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- AD 5 — THE QUIZ AD (COLD AUDIENCE / PERSONALIZATION)  -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="section-header">
+  <h2>Ad Concepts</h2>
+  <p>Each card includes the 1:1 creative on the left and full Meta ad copy on the right.</p>
+</div>
+
+<div class="ad-card" id="ad-quiz">
+  <div class="ad-card-inner">
+    <div class="ad-image">
+      <div class="tags">
+        <span class="tag tag-cold">Cold — Awareness</span>
+        <span class="tag tag-product">IVF+</span>
+      </div>
+      <div class="creative creative-quiz">
+        <div class="nucleus-logo">
+          <svg viewBox="0 0 40 40" fill="none" width="22" height="22"><path fill="#1a1a1a" d="m21.466 5.071.004 10.915c.001 1.725-1.834 2.83-3.358 2.024L7.17 12.223a15.1 15.1 0 0 1 3.1-3.64l8.582 7.932c.455.42 1.172-.036.985-.626L16.509 5.41a15 15 0 0 1 4.956-.338M18.496 34.925l-.005-10.86c0-1.724 1.834-2.83 3.359-2.023l10.946 5.79a15 15 0 0 1-3.116 3.626l-8.57-7.921c-.455-.42-1.172.035-.985.625l3.316 10.441a15 15 0 0 1-4.945.322M23.492 18.898 31.44 10.3a15 15 0 0 0-3.64-3.113l-5.804 10.972c-.806 1.524.3 3.359 2.024 3.358l10.905-.005a15.2 15.2 0 0 0-.324-4.958l-10.484 3.33c-.59.187-1.045-.53-.625-.985M5.07 18.54l10.872-.004c1.725 0 2.83 1.834 2.024 3.358L12.192 32.81a15 15 0 0 1-3.627-3.103l7.906-8.553c.42-.455-.036-1.172-.626-.985L5.408 23.484a15 15 0 0 1-.337-4.943"/></svg>
+          Nucleus
+        </div>
+        <div class="overlay-text" style="margin-top:20px">
+          <h2>Which IVF path<br>is right for you?</h2>
+          <p>Every fertility journey is different. Take our 2-minute quiz to find out which Nucleus product fits your situation.</p>
+          <div class="quiz-cta">Take the Quiz <span class="arrow">&rarr;</span></div>
+        </div>
+        <div class="photo-strip">
+          <img src="https://framerusercontent.com/images/SXTbUCtQqUM556krZR66y9yr1iw.jpg" alt="Happy couple with baby">
+        </div>
+      </div>
+      <button class="save-btn save-btn-img" onclick="saveCreative(this)">&#x1F4BE; Save Image</button>
+    </div>
+    <div class="ad-copy">
+      <div class="ad-label">Ad #1 &mdash; Personalization Quiz</div>
+      <h3>Cold audience hook that promises a tailored answer, not a generic pitch.</h3>
+      <div class="ad-copy-fields">
+        <div>
+          <div class="field-label">Primary Text</div>
+          <div class="field-value">Every fertility journey is unique. Whether you're just starting to explore IVF, already have embryos, or want to plan your family before pregnancy — there's a Nucleus product built for your situation. Take our quick quiz and get a personalized recommendation in under 2 minutes.</div>
+        </div>
+        <div>
+          <div class="field-label">Headline</div>
+          <div class="field-value headline">Which IVF path is right for you?</div>
+        </div>
+        <div>
+          <div class="field-label">Link Description</div>
+          <div class="field-value">2-minute quiz &bull; Personalized recommendation &bull; No commitment</div>
+        </div>
+        <div>
+          <div class="field-label">CTA Button</div>
+          <div class="field-value cta-text">Take the Quiz &rarr;</div>
+        </div>
+        <div>
+          <div class="field-label">Deep Link</div>
+          <div class="deep-link">https://mynucleus.com/ivf?utm_source=meta&amp;utm_medium=paid&amp;utm_campaign=quiz_cold&amp;utm_content=quiz_cta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- AD 6 — WSJ PULL QUOTE (CREDIBILITY)           -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="ad-card" id="ad-wsj">
+  <div class="ad-card-inner reverse">
+    <div class="ad-image">
+      <div class="tags">
+        <span class="tag tag-cold">Cold — Credibility</span>
+        <span class="tag tag-product">Brand</span>
+      </div>
+      <div class="creative creative-wsj">
+        <span class="quote-mark">&ldquo;</span>
+        <blockquote>Longevity Is Now a Factor When Picking an Embryo.</blockquote>
+        <div class="attribution">&mdash; The Wall Street Journal</div>
+        <div class="sub-copy">Meet the technology making that possible.</div>
+        <div class="logo-row-wsj">
+          <div class="nucleus-mark">
+            <svg viewBox="0 0 40 40" fill="none" width="24" height="24"><path fill="#fff" d="m21.466 5.071.004 10.915c.001 1.725-1.834 2.83-3.358 2.024L7.17 12.223a15.1 15.1 0 0 1 3.1-3.64l8.582 7.932c.455.42 1.172-.036.985-.626L16.509 5.41a15 15 0 0 1 4.956-.338M18.496 34.925l-.005-10.86c0-1.724 1.834-2.83 3.359-2.023l10.946 5.79a15 15 0 0 1-3.116 3.626l-8.57-7.921c-.455-.42-1.172.035-.985.625l3.316 10.441a15 15 0 0 1-4.945.322M23.492 18.898 31.44 10.3a15 15 0 0 0-3.64-3.113l-5.804 10.972c-.806 1.524.3 3.359 2.024 3.358l10.905-.005a15.2 15.2 0 0 0-.324-4.958l-10.484 3.33c-.59.187-1.045-.53-.625-.985M5.07 18.54l10.872-.004c1.725 0 2.83 1.834 2.024 3.358L12.192 32.81a15 15 0 0 1-3.627-3.103l7.906-8.553c.42-.455-.036-1.172-.626-.985L5.408 23.484a15 15 0 0 1-.337-4.943"/></svg>
+            Nucleus
+          </div>
+          <span class="wsj-cta">Learn more</span>
+        </div>
+      </div>
+      <button class="save-btn save-btn-img" onclick="saveCreative(this)">&#x1F4BE; Save Image</button>
+    </div>
+    <div class="ad-copy">
+      <div class="ad-label">Ad #2 &mdash; WSJ Pull Quote</div>
+      <h3>Third-party credibility does the heavy lifting. No selling required.</h3>
+      <div class="ad-copy-fields">
+        <div>
+          <div class="field-label">Primary Text</div>
+          <div class="field-value">The Wall Street Journal just covered the science behind Nucleus. For the first time, parents can factor longevity into their IVF decisions — not just viability. This isn't a future technology. It's available now at select fertility clinics across the US.</div>
+        </div>
+        <div>
+          <div class="field-label">Headline</div>
+          <div class="field-value headline">"Longevity Is Now a Factor When Picking an Embryo." — WSJ</div>
+        </div>
+        <div>
+          <div class="field-label">Link Description</div>
+          <div class="field-value">As featured in The Wall Street Journal, Forbes, and Axios</div>
+        </div>
+        <div>
+          <div class="field-label">CTA Button</div>
+          <div class="field-value cta-text">Learn More</div>
+        </div>
+        <div>
+          <div class="field-label">Deep Link</div>
+          <div class="deep-link">https://mynucleus.com/?utm_source=meta&amp;utm_medium=paid&amp;utm_campaign=wsj_credibility&amp;utm_content=wsj_quote</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- AD 7 — THE NUMBER AD (MID-FUNNEL)             -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="ad-card" id="ad-number">
+  <div class="ad-card-inner">
+    <div class="ad-image">
+      <div class="tags">
+        <span class="tag tag-mid">Mid-Funnel — Feature</span>
+        <span class="tag tag-product">Embryo</span>
+      </div>
+      <div class="creative creative-number">
+        <div class="big-number">2,000<span>+</span></div>
+        <div class="label-top">conditions Nucleus screens for in every embryo.</div>
+        <div class="contrast-line">Your clinic screens for fewer than 10.</div>
+        <div class="num-cta">See what you've been missing</div>
+        <div class="nucleus-sm">
+          <svg viewBox="0 0 40 40" fill="none" width="18" height="18"><path fill="#6b6b6b" d="m21.466 5.071.004 10.915c.001 1.725-1.834 2.83-3.358 2.024L7.17 12.223a15.1 15.1 0 0 1 3.1-3.64l8.582 7.932c.455.42 1.172-.036.985-.626L16.509 5.41a15 15 0 0 1 4.956-.338M18.496 34.925l-.005-10.86c0-1.724 1.834-2.83 3.359-2.023l10.946 5.79a15 15 0 0 1-3.116 3.626l-8.57-7.921c-.455-.42-1.172.035-.985.625l3.316 10.441a15 15 0 0 1-4.945.322M23.492 18.898 31.44 10.3a15 15 0 0 0-3.64-3.113l-5.804 10.972c-.806 1.524.3 3.359 2.024 3.358l10.905-.005a15.2 15.2 0 0 0-.324-4.958l-10.484 3.33c-.59.187-1.045-.53-.625-.985M5.07 18.54l10.872-.004c1.725 0 2.83 1.834 2.024 3.358L12.192 32.81a15 15 0 0 1-3.627-3.103l7.906-8.553c.42-.455-.036-1.172-.626-.985L5.408 23.484a15 15 0 0 1-.337-4.943"/></svg>
+          Nucleus
+        </div>
+      </div>
+      <button class="save-btn save-btn-img" onclick="saveCreative(this)">&#x1F4BE; Save Image</button>
+    </div>
+    <div class="ad-copy">
+      <div class="ad-label">Ad #3 &mdash; The Number Ad</div>
+      <h3>Stark and impossible to ignore. The number does the work.</h3>
+      <div class="ad-copy-fields">
+        <div>
+          <div class="field-label">Primary Text</div>
+          <div class="field-value">Standard PGT tests screen for fewer than 10 genetic conditions. Nucleus screens for over 2,000 — including cancers, heart disease, Alzheimer's, and dozens more that won't show up until adulthood. If you're already doing IVF, why settle for a fraction of the picture?</div>
+        </div>
+        <div>
+          <div class="field-label">Headline</div>
+          <div class="field-value headline">2,000+ conditions. Your clinic tests for fewer than 10.</div>
+        </div>
+        <div>
+          <div class="field-label">Link Description</div>
+          <div class="field-value">Advanced embryo screening &bull; Available at partner clinics now</div>
+        </div>
+        <div>
+          <div class="field-label">CTA Button</div>
+          <div class="field-value cta-text">Learn More</div>
+        </div>
+        <div>
+          <div class="field-label">Deep Link</div>
+          <div class="deep-link">https://mynucleus.com/embryo?utm_source=meta&amp;utm_medium=paid&amp;utm_campaign=number_mid&amp;utm_content=2000_conditions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- AD 8 — PARENT TESTIMONIAL (SOCIAL PROOF)      -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="ad-card" id="ad-testimonial">
+  <div class="ad-card-inner reverse">
+    <div class="ad-image">
+      <div class="tags">
+        <span class="tag tag-consideration">Consideration — Social Proof</span>
+        <span class="tag tag-product">IVF+</span>
+      </div>
+      <div class="creative creative-testimonial">
+        <img class="test-photo" src="https://framerusercontent.com/images/I7ZJe2pPYTLYuGU98yaiMJJbMpw.jpg" alt="Family lifestyle photo">
+        <blockquote>&ldquo;Nucleus carefully analyzed the genome of every single one of our embryos and gave us a report on which were likely to grow into adults with a long, healthy life.&rdquo;</blockquote>
+        <div class="test-name">Miro &amp; Justin W.</div>
+        <div class="test-role">IVF+ Parents</div>
+        <div class="test-cta">Start your journey &rarr;</div>
+      </div>
+      <button class="save-btn save-btn-img" onclick="saveCreative(this)">&#x1F4BE; Save Image</button>
+    </div>
+    <div class="ad-copy">
+      <div class="ad-label">Ad #4 &mdash; Parent Testimonial</div>
+      <h3>Social proof from real parents, speaking in their own words.</h3>
+      <div class="ad-copy-fields">
+        <div>
+          <div class="field-label">Primary Text</div>
+          <div class="field-value">When Miro and Justin started IVF, they wanted more than just a viable pregnancy — they wanted the healthiest possible start for their child. Nucleus analyzed every embryo's complete genome and showed them which ones were most likely to lead long, healthy lives. Hear their story.</div>
+        </div>
+        <div>
+          <div class="field-label">Headline</div>
+          <div class="field-value headline">"Nucleus analyzed every one of our embryos." — Miro &amp; Justin</div>
+        </div>
+        <div>
+          <div class="field-label">Link Description</div>
+          <div class="field-value">Real IVF+ patients &bull; Real results &bull; Read their story</div>
+        </div>
+        <div>
+          <div class="field-label">CTA Button</div>
+          <div class="field-value cta-text">Start Your Journey</div>
+        </div>
+        <div>
+          <div class="field-label">Deep Link</div>
+          <div class="deep-link">https://mynucleus.com/ivf?utm_source=meta&amp;utm_medium=paid&amp;utm_campaign=testimonial_consideration&amp;utm_content=miro_justin</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- AD 9 — DISEASE PREVENTION (BOTTOM-FUNNEL)     -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="ad-card" id="ad-disease">
+  <div class="ad-card-inner">
+    <div class="ad-image">
+      <div class="tags">
+        <span class="tag tag-bottom">Bottom-Funnel — Conversion</span>
+        <span class="tag tag-product">Preview</span>
+      </div>
+      <div class="creative creative-disease">
+        <div class="stat-badge">1 in 4 chance</div>
+        <div class="headline-disease">One in four chance your baby has cystic fibrosis.<br><br>They chose IVF. They chose Nucleus.<br>Their son is healthy.</div>
+        <div class="story-quote">&ldquo;We discovered we're both carriers for CF. Now our little one is happy, healthy, and ready to take his first step.&rdquo;</div>
+        <div class="story-name">&mdash; Emily &amp; Tom</div>
+        <div class="dis-cta">Hear more stories</div>
+        <div class="nucleus-foot">
+          <svg viewBox="0 0 40 40" fill="none" width="18" height="18"><path fill="#6b6b6b" d="m21.466 5.071.004 10.915c.001 1.725-1.834 2.83-3.358 2.024L7.17 12.223a15.1 15.1 0 0 1 3.1-3.64l8.582 7.932c.455.42 1.172-.036.985-.626L16.509 5.41a15 15 0 0 1 4.956-.338M18.496 34.925l-.005-10.86c0-1.724 1.834-2.83 3.359-2.023l10.946 5.79a15 15 0 0 1-3.116 3.626l-8.57-7.921c-.455-.42-1.172.035-.985.625l3.316 10.441a15 15 0 0 1-4.945.322M23.492 18.898 31.44 10.3a15 15 0 0 0-3.64-3.113l-5.804 10.972c-.806 1.524.3 3.359 2.024 3.358l10.905-.005a15.2 15.2 0 0 0-.324-4.958l-10.484 3.33c-.59.187-1.045-.53-.625-.985M5.07 18.54l10.872-.004c1.725 0 2.83 1.834 2.024 3.358L12.192 32.81a15 15 0 0 1-3.627-3.103l7.906-8.553c.42-.455-.036-1.172-.626-.985L5.408 23.484a15 15 0 0 1-.337-4.943"/></svg>
+          Nucleus
+        </div>
+      </div>
+      <button class="save-btn save-btn-img" onclick="saveCreative(this)">&#x1F4BE; Save Image</button>
+    </div>
+    <div class="ad-copy">
+      <div class="ad-label">Ad #5 &mdash; Disease Prevention</div>
+      <h3>The most emotionally direct ad — real stakes, real outcome, no embellishment.</h3>
+      <div class="ad-copy-fields">
+        <div>
+          <div class="field-label">Primary Text</div>
+          <div class="field-value">Emily and Tom looked perfectly healthy. But carrier screening revealed they both carry the gene for cystic fibrosis — giving any child a 25% chance of having CF. They chose IVF with Nucleus. Their son was screened across 2,000+ conditions before implantation. Today, he's healthy and thriving.</div>
+        </div>
+        <div>
+          <div class="field-label">Headline</div>
+          <div class="field-value headline">They didn't know they were both CF carriers. Nucleus did.</div>
+        </div>
+        <div>
+          <div class="field-label">Link Description</div>
+          <div class="field-value">Carrier screening for 2,000+ conditions &bull; Real patient story</div>
+        </div>
+        <div>
+          <div class="field-label">CTA Button</div>
+          <div class="field-value cta-text">Hear More Stories</div>
+        </div>
+        <div>
+          <div class="field-label">Deep Link</div>
+          <div class="deep-link">https://mynucleus.com/preview?utm_source=meta&amp;utm_medium=paid&amp;utm_campaign=disease_bottom&amp;utm_content=cf_story</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- AD 10 — LONGEVITY REFRAME (EDUCATION)         -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="ad-card" id="ad-longevity">
+  <div class="ad-card-inner reverse">
+    <div class="ad-image">
+      <div class="tags">
+        <span class="tag tag-education">Education — Reframe</span>
+        <span class="tag tag-product">Health</span>
+      </div>
+      <div class="creative creative-longevity">
+        <div class="photo-bg">
+          <img src="https://framerusercontent.com/images/5nfMM5E0UI4dIGe7SQ9tn6eHQb4.jpg" alt="Parent playing with child outdoors">
+        </div>
+        <div class="longevity-content">
+          <h2>Your baby's longevity starts before they're born.</h2>
+          <p>Nucleus screens embryos for lifetime disease risk — not just viability. Give your child more healthy years.</p>
+          <span class="long-cta">See how it works</span>
+          <div class="nucleus-footer">
+            <svg viewBox="0 0 40 40" fill="none" width="20" height="20"><path fill="#1a1a1a" d="m21.466 5.071.004 10.915c.001 1.725-1.834 2.83-3.358 2.024L7.17 12.223a15.1 15.1 0 0 1 3.1-3.64l8.582 7.932c.455.42 1.172-.036.985-.626L16.509 5.41a15 15 0 0 1 4.956-.338M18.496 34.925l-.005-10.86c0-1.724 1.834-2.83 3.359-2.023l10.946 5.79a15 15 0 0 1-3.116 3.626l-8.57-7.921c-.455-.42-1.172.035-.985.625l3.316 10.441a15 15 0 0 1-4.945.322M23.492 18.898 31.44 10.3a15 15 0 0 0-3.64-3.113l-5.804 10.972c-.806 1.524.3 3.359 2.024 3.358l10.905-.005a15.2 15.2 0 0 0-.324-4.958l-10.484 3.33c-.59.187-1.045-.53-.625-.985M5.07 18.54l10.872-.004c1.725 0 2.83 1.834 2.024 3.358L12.192 32.81a15 15 0 0 1-3.627-3.103l7.906-8.553c.42-.455-.036-1.172-.626-.985L5.408 23.484a15 15 0 0 1-.337-4.943"/></svg>
+            Nucleus
+          </div>
+        </div>
+      </div>
+      <button class="save-btn save-btn-img" onclick="saveCreative(this)">&#x1F4BE; Save Image</button>
+    </div>
+    <div class="ad-copy">
+      <div class="ad-label">Ad #6 &mdash; Longevity Reframe</div>
+      <h3>Reframes IVF from fertility solution into a proactive health &amp; longevity decision.</h3>
+      <div class="ad-copy-fields">
+        <div>
+          <div class="field-label">Primary Text</div>
+          <div class="field-value">Most people think IVF is just for getting pregnant. But what if it could also determine how long — and how well — your child lives? Nucleus screens embryos for lifetime disease risk across cancers, heart disease, diabetes, Alzheimer's, and more. It's not just fertility. It's the biggest health decision you'll ever make for your child.</div>
+        </div>
+        <div>
+          <div class="field-label">Headline</div>
+          <div class="field-value headline">Your baby's longevity starts before they're born.</div>
+        </div>
+        <div>
+          <div class="field-label">Link Description</div>
+          <div class="field-value">Screen for 2,000+ lifetime health risks &bull; Nucleus Genomics</div>
+        </div>
+        <div>
+          <div class="field-label">CTA Button</div>
+          <div class="field-value cta-text">Learn More</div>
+        </div>
+        <div>
+          <div class="field-label">Deep Link</div>
+          <div class="deep-link">https://mynucleus.com/health?utm_source=meta&amp;utm_medium=paid&amp;utm_campaign=longevity_education&amp;utm_content=reframe</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- EXPORT INSTRUCTIONS FOR META ADS MANAGER          -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="export-section" id="export">
+  <h2>Meta Ads Manager — Export Guide</h2>
+  <p>Complete specs, campaign setup, audience targeting, and UTM tracking templates.</p>
+
+  <h3>Image Specifications</h3>
+  <table class="spec-table">
+    <thead>
+      <tr><th>Spec</th><th>Requirement</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Dimensions</td><td><strong>1080 &times; 1080 px</strong></td><td>1:1 ratio for Feed, Marketplace, Search</td></tr>
+      <tr><td>Story/Reels</td><td><strong>1080 &times; 1920 px</strong></td><td>9:16 ratio — add safe zones for text overlays</td></tr>
+      <tr><td>Format</td><td><strong>PNG or JPG</strong></td><td>PNG for text-heavy creatives, JPG for photos</td></tr>
+      <tr><td>Max File Size</td><td><strong>30 MB</strong></td><td>Recommended under 5 MB for faster delivery</td></tr>
+      <tr><td>Text-on-Image</td><td><strong>&lt; 20% text area</strong></td><td>Meta no longer penalizes, but less text = better reach</td></tr>
+      <tr><td>Placements</td><td>Feed, Stories, Reels, Marketplace, Search, Right Column</td><td>Use Advantage+ Placements for best optimization</td></tr>
+      <tr><td>Primary Text</td><td><strong>125 chars</strong> (before "See More")</td><td>Front-load the hook in the first line</td></tr>
+      <tr><td>Headline</td><td><strong>27 chars</strong> visible on mobile</td><td>Full headline shows on desktop</td></tr>
+      <tr><td>Link Description</td><td><strong>27 chars</strong> visible</td><td>Used on desktop placements only</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Step-by-Step Campaign Setup</h3>
+  <ol class="steps-list">
+    <li><strong>Create Campaign</strong> — Go to Ads Manager &rarr; Create &rarr; Choose objective based on funnel stage:
+      <br>&bull; <strong>Ads 1 &amp; 2 (Cold):</strong> Use <code>Awareness</code> or <code>Traffic</code> objective
+      <br>&bull; <strong>Ads 3 &amp; 4 (Mid/Consideration):</strong> Use <code>Engagement</code> or <code>Traffic</code> with landing page view optimization
+      <br>&bull; <strong>Ads 5 &amp; 6 (Bottom/Education):</strong> Use <code>Leads</code> or <code>Conversions</code> with "Complete Registration" event</li>
+    <li><strong>Set Budget</strong> — Start with $50-100/day per ad set. Use CBO (Campaign Budget Optimization) if running 3+ ad sets.</li>
+    <li><strong>Create Ad Set</strong> — Select audience (see targeting below). Set placements to Advantage+ or manual Feed + Stories. Schedule for 7-day learning phase minimum.</li>
+    <li><strong>Create Ad</strong> — Upload the 1:1 creative image. Paste the Primary Text, Headline, and Link Description from each ad card above. Set CTA button. Enter the Deep Link URL.</li>
+    <li><strong>Tracking</strong> — Install Meta Pixel on mynucleus.com. Set up Conversions API (CAPI) for server-side events. Verify "Lead" and "CompleteRegistration" events fire on form submission.</li>
+    <li><strong>Review &amp; Publish</strong> — Preview in all placements. Check mobile rendering. Submit for review (typically approved within 24 hours for health-adjacent content).</li>
+  </ol>
+
+  <h3>Audience Targeting by Funnel Stage</h3>
+  <div class="audience-grid">
+    <div class="audience-card">
+      <h4>&#x1F535; Cold — Awareness (Ads 1 &amp; 2)</h4>
+      <p><strong>Interest targeting:</strong> IVF, In Vitro Fertilization, Fertility Treatments, Reproductive Medicine, Genetic Testing, Prenatal Care<br><br>
+      <strong>Demographics:</strong> Women 28-42 &bull; Household income top 25% &bull; Engaged or Married<br><br>
+      <strong>Lookalikes:</strong> 1-3% LAL based on website visitors or lead list<br><br>
+      <strong>Exclusions:</strong> Existing customers, past purchasers</p>
+    </div>
+    <div class="audience-card">
+      <h4>&#x1F7E1; Consideration (Ads 3 &amp; 4)</h4>
+      <p><strong>Retargeting:</strong> Website visitors (last 30 days) who viewed /ivf, /embryo, or /preview pages<br><br>
+      <strong>Engagement:</strong> People who engaged with your Instagram/Facebook content in last 60 days<br><br>
+      <strong>Video viewers:</strong> 50%+ video viewers from awareness campaigns<br><br>
+      <strong>Exclusions:</strong> People who already submitted a lead form</p>
+    </div>
+    <div class="audience-card">
+      <h4>&#x1F534; Bottom-Funnel (Ad 5) &amp; &#x1F7E3; Education (Ad 6)</h4>
+      <p><strong>High-intent retargeting:</strong> Website visitors who viewed pricing page or clicked "Get Started"<br><br>
+      <strong>Cart abandoners:</strong> People who started but didn't complete the consultation booking<br><br>
+      <strong>Broad for education:</strong> Ad 6 can also run broad to biohacker/longevity interest audiences (e.g., Bryan Johnson, Peter Attia, longevity, epigenetics)<br><br>
+      <strong>Exclusions:</strong> Converted leads, existing patients</p>
+    </div>
+  </div>
+
+  <h3>Deep Link URLs per Creative</h3>
+  <table class="spec-table">
+    <thead>
+      <tr><th>Ad</th><th>Product</th><th>Destination URL</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Ad 1 — Quiz</td><td>IVF+</td><td><code>https://mynucleus.com/ivf</code></td></tr>
+      <tr><td>Ad 2 — WSJ</td><td>Brand</td><td><code>https://mynucleus.com/</code></td></tr>
+      <tr><td>Ad 3 — Number</td><td>Embryo</td><td><code>https://mynucleus.com/embryo</code></td></tr>
+      <tr><td>Ad 4 — Testimonial</td><td>IVF+</td><td><code>https://mynucleus.com/ivf</code></td></tr>
+      <tr><td>Ad 5 — Disease</td><td>Preview</td><td><code>https://mynucleus.com/preview</code></td></tr>
+      <tr><td>Ad 6 — Longevity</td><td>Health</td><td><code>https://mynucleus.com/health</code></td></tr>
+    </tbody>
+  </table>
+
+  <h3>UTM Parameter Templates</h3>
+  <div class="utm-block"><!-- Cold / Awareness -->
+?utm_source=meta&amp;utm_medium=paid&amp;utm_campaign={{campaign.name}}&amp;utm_content={{ad.name}}&amp;utm_term={{adset.name}}
+
+<!-- Dynamic Macro Format (paste into URL Parameters field): -->
+utm_source=meta
+utm_medium=paid
+utm_campaign={{campaign.name}}
+utm_content={{ad.name}}
+utm_term={{adset.name}}
+
+<!-- Example resolved URL: -->
+https://mynucleus.com/ivf?utm_source=meta&amp;utm_medium=paid&amp;utm_campaign=quiz_cold&amp;utm_content=quiz_cta_v1&amp;utm_term=interest_ivf_28-42</div>
+
+</div><!-- /export-section -->
+
+</main>
+
+<!-- ===== SAVE IMAGE SCRIPT ===== -->
+<script>
+async function saveCreative(btn) {
+  const card = btn.closest('.ad-image');
+  const creative = card.querySelector('.creative');
+  if (!creative) return;
+  btn.textContent = 'Preparing...';
+  btn.disabled = true;
+  try {
+    // Use html2canvas if available, otherwise fallback to screenshot instructions
+    if (typeof html2canvas !== 'undefined') {
+      const canvas = await html2canvas(creative, {
+        width: 1080, height: 1080, scale: 1,
+        useCORS: true, allowTaint: true,
+        backgroundColor: null
+      });
+      const link = document.createElement('a');
+      link.download = 'nucleus-ad-' + Date.now() + '.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      btn.textContent = '\u2705 Saved!';
+    } else {
+      // Fallback: load html2canvas dynamically
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+      script.onload = () => saveCreative(btn);
+      document.head.appendChild(script);
+      return;
+    }
+  } catch (e) {
+    btn.textContent = '\u274C Error — use browser screenshot';
+    console.error(e);
+  }
+  setTimeout(() => { btn.textContent = '\uD83D\uDCBE Save Image'; btn.disabled = false; }, 3000);
+}
+</script>
+
+</body>
+</html>

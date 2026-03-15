@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fully Optimized Health | Jay Campbell — The Premium Protocol for Men Who Refuse to Settle</title>
+    <meta name="description" content="The flagship coaching program for men 35-60 who are done feeling like a shell of who they used to be. Testosterone optimization, fat loss, mental clarity — the full protocol with direct access to Jay Campbell.">
+    <link rel="icon" href="https://jaycampbell.com/wp-content/uploads/2023/01/cropped-Favicon-32x32.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        h1, h2, h3, h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+        }
+
+        h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+        h3 { font-size: clamp(1.4rem, 3vw, 2rem); }
+
+        .subhead {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            letter-spacing: 0.03em;
+        }
+
+        .body-text {
+            font-family: 'Open Sans', sans-serif;
+            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+            line-height: 1.75;
+            color: #cccccc;
+        }
+
+        .accent-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.85rem;
+        }
+
+        /* ============================================
+           LAYOUT
+           ============================================ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container--narrow {
+            max-width: 800px;
+        }
+
+        .container--wide {
+            max-width: 1400px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section--dark {
+            background-color: #000000;
+        }
+
+        .section--darker {
+            background-color: #0a0a0a;
+        }
+
+        .section--gradient {
+            background: linear-gradient(180deg, #000000 0%, #0d0d0d 50%, #000000 100%);
+        }
+
+        .text-center { text-align: center; }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 18px 48px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn--primary {
+            background: linear-gradient(135deg, #e8511f 0%, #d4411a 50%, #c03415 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(232, 81, 31, 0.3);
+        }
+
+        .btn--primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(232, 81, 31, 0.5);
+        }
+
+        .btn--secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn--secondary:hover {
+            border-color: #e8511f;
+            color: #e8511f;
+        }
+
+        .btn--large {
+            padding: 22px 60px;
+            font-size: 1.05rem;
+        }
+
+        /* ============================================
+           NAVBAR
+           ============================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 12px 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar__logo img {
+            height: 42px;
+            width: auto;
+        }
+
+        .navbar__cta .btn {
+            padding: 12px 32px;
+            font-size: 0.8rem;
+        }
+
+        .navbar__links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .navbar__links a {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+        }
+
+        .navbar__links a:hover {
+            color: #ffffff;
+        }
+
+        .navbar__mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .navbar__mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #ffffff;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+            overflow: hidden;
+            background: #000000;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: radial-gradient(ellipse at 70% 50%, rgba(232, 81, 31, 0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(232, 81, 31, 0.1);
+            border: 1px solid rgba(232, 81, 31, 0.3);
+            padding: 8px 20px;
+            border-radius: 100px;
+            margin-bottom: 28px;
+        }
+
+        .hero__badge span {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #e8511f;
+        }
+
+        .hero__title {
+            margin-bottom: 24px;
+            color: #ffffff;
+        }
+
+        .hero__title .highlight {
+            color: #e8511f;
+        }
+
+        .hero__subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+            color: #999999;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .hero__proof {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 36px;
+        }
+
+        .hero__ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero__image {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .hero__image img {
+            max-height: 85vh;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 60px rgba(0, 0, 0, 0.5));
+        }
+
+        /* ============================================
+           CREDIBILITY BAR
+           ============================================ */
+        .credibility {
+            padding: 50px 0;
+            background: #0a0a0a;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .credibility__label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: rgba(255, 255, 255, 0.35);
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .credibility__logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .credibility__logos img {
+            height: 30px;
+            width: auto;
+            opacity: 0.45;
+            filter: brightness(0) invert(1);
+            transition: opacity 0.3s ease;
+        }
+
+        .credibility__logos img:hover {
+            opacity: 0.8;
+        }
+
+        /* ============================================
+           PROBLEM SECTION
+           ============================================ */
+        .problem {
+            padding: 120px 0;
+            background: #000000;
+        }
+
+        .problem__header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 70px;
+        }
+
+        .problem__header .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #e8511f;
+            margin-bottom: 20px;
+        }
+
+        .problem__header h2 {
+            margin-bottom: 20px;
+        }
+
+        .problem__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        .problem__card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 40px 32px;
+            transition: all 0.3s ease;
+        }
+
+        .problem__card:hover {
+            border-color: rgba(232, 81, 31, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .problem__card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(232, 81, 31, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 1.4rem;
+        }
+
+        .problem__card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 14px;
+            color: #ffffff;
+        }
+
+        .problem__card p {
+            font-size: 0.95rem;
+            color: #888888;
+            line-height: 1.7;
+        }
+
+        .problem__quote {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px;
+            border-left: 3px solid #e8511f;
+            background: rgba(232, 81, 31, 0.03);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .problem__quote p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #cccccc;
+            line-height: 1.8;
+        }
+
+        .problem__quote cite {
+            display: block;
+            margin-top: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #e8511f;
+            font-style: normal;
+        }
+
+        /* ============================================
+           SOLUTION SECTION
+           ============================================ */
+        .solution {
+            padding: 120px 0;
+            background: linear-gradient(180deg, #0a0a0a 0%, #000000 100%);
+        }
+
+        .solution__header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 70px;
+        }
+
+        .solution__header .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #e8511f;
+            margin-bottom: 20px;
+        }
+
+        .solution__header p {
+            color: #999999;
+            font-size: 1.1rem;
+            line-height: 1.75;
+            margin-top: 20px;
+        }
+
+        .solution__pillars {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        .pillar {
+            display: flex;
+            gap: 24px;
+            padding: 36px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .pillar:hover {
+            border-color: rgba(232, 81, 31, 0.2);
+        }
+
+        .pillar__number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: rgba(232, 81, 31, 0.3);
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .pillar h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .pillar p {
+            font-size: 0.95rem;
+            color: #888888;
+            line-height: 1.7;
+        }
+
+        .solution__cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* ============================================
+           TRANSFORMATIONS / SOCIAL PROOF
+           ============================================ */
+        .proof {
+            padding: 120px 0;
+            background: #000000;
+        }
+
+        .proof__header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .proof__header .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #e8511f;
+            margin-bottom: 20px;
+        }
+
+        .proof__header p {
+            color: #999999;
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 16px auto 0;
+        }
+
+        .proof__transformations {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        .transformation {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: transform 0.3s ease;
+        }
+
+        .transformation:hover {
+            transform: scale(1.02);
+        }
+
+        .transformation img {
+            width: 100%;
+            height: auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial:hover {
+            border-color: rgba(232, 81, 31, 0.15);
+        }
+
+        .testimonial__stars {
+            color: #e8511f;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial__text {
+            font-size: 0.95rem;
+            color: #aaaaaa;
+            line-height: 1.75;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial__author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial__author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(232, 81, 31, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #e8511f;
+            flex-shrink: 0;
+        }
+
+        .testimonial__author-name {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #ffffff;
+        }
+
+        .testimonial__author-detail {
+            font-size: 0.8rem;
+            color: #666666;
+        }
+
+        /* ============================================
+           LEAD MAGNET SECTION
+           ============================================ */
+        .lead-magnet {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #0d0d0d 0%, #111111 50%, #0d0d0d 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .lead-magnet .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .lead-magnet__content .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #e8511f;
+            margin-bottom: 20px;
+        }
+
+        .lead-magnet__content h2 {
+            margin-bottom: 20px;
+        }
+
+        .lead-magnet__content p {
+            color: #999999;
+            font-size: 1.05rem;
+            line-height: 1.75;
+            margin-bottom: 24px;
+        }
+
+        .lead-magnet__list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .lead-magnet__list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            font-size: 0.95rem;
+            color: #cccccc;
+        }
+
+        .lead-magnet__list li::before {
+            content: '✓';
+            color: #e8511f;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .lead-magnet__form {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 48px;
+        }
+
+        .lead-magnet__form h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .lead-magnet__form .form-subtitle {
+            text-align: center;
+            color: #888888;
+            font-size: 0.9rem;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input::placeholder {
+            color: #666666;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #e8511f;
+        }
+
+        .lead-magnet__form .btn {
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .form-disclaimer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #555555;
+            margin-top: 16px;
+        }
+
+        /* ============================================
+           OFFER / PRICING SECTION
+           ============================================ */
+        .offer {
+            padding: 120px 0;
+            background: #000000;
+        }
+
+        .offer__header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .offer__header .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #e8511f;
+            margin-bottom: 20px;
+        }
+
+        .offer__header p {
+            color: #999999;
+            font-size: 1.05rem;
+            margin-top: 16px;
+        }
+
+        .offer__card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: linear-gradient(180deg, rgba(232, 81, 31, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(232, 81, 31, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .offer__card-header {
+            background: linear-gradient(135deg, #e8511f 0%, #c03415 100%);
+            padding: 32px 40px;
+            text-align: center;
+        }
+
+        .offer__card-header h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 0.05em;
+        }
+
+        .offer__card-header .offer-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+
+        .offer__card-body {
+            padding: 48px 40px;
+        }
+
+        .offer__includes {
+            list-style: none;
+            margin-bottom: 36px;
+        }
+
+        .offer__includes li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 1rem;
+            color: #cccccc;
+        }
+
+        .offer__includes li:last-child {
+            border-bottom: none;
+        }
+
+        .offer__includes li .check {
+            color: #e8511f;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .offer__includes li strong {
+            color: #ffffff;
+        }
+
+        .offer__price {
+            text-align: center;
+            padding: 32px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .offer__price-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #888888;
+            margin-bottom: 8px;
+        }
+
+        .offer__price-amount {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        .offer__price-period {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            color: #666666;
+            margin-top: 4px;
+        }
+
+        .offer__price-note {
+            font-size: 0.85rem;
+            color: #888888;
+            margin-top: 12px;
+            font-style: italic;
+        }
+
+        .offer__card-footer {
+            padding: 0 40px 48px;
+            text-align: center;
+        }
+
+        .offer__card-footer .btn {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .offer__card-footer .guarantee {
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: #666666;
+        }
+
+        /* ============================================
+           AUTHORITY / ABOUT SECTION
+           ============================================ */
+        .authority {
+            padding: 120px 0;
+            background: linear-gradient(180deg, #0a0a0a 0%, #000000 100%);
+        }
+
+        .authority .container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .authority__image {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .authority__image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .authority__content .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #e8511f;
+            margin-bottom: 20px;
+        }
+
+        .authority__content h2 {
+            margin-bottom: 24px;
+        }
+
+        .authority__content p {
+            color: #999999;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .authority__stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat__number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: #e8511f;
+            line-height: 1;
+        }
+
+        .stat__label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+            color: #666666;
+            margin-top: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ============================================
+           EXPERT ENDORSEMENTS
+           ============================================ */
+        .endorsements {
+            padding: 80px 0;
+            background: #000000;
+        }
+
+        .endorsements__header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .endorsements__header .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #e8511f;
+            margin-bottom: 16px;
+        }
+
+        .endorsements__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .endorsement-img {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .endorsement-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* ============================================
+           FINAL CTA
+           ============================================ */
+        .final-cta {
+            padding: 120px 0;
+            background: linear-gradient(180deg, #000000 0%, #0a0a0a 40%, #0d0d0d 60%, #0a0a0a 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(232, 81, 31, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .final-cta p {
+            color: #999999;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.75;
+            position: relative;
+        }
+
+        .final-cta .btn {
+            position: relative;
+        }
+
+        .final-cta__note {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: #555555;
+            position: relative;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            background: #000000;
+        }
+
+        .footer .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer__logo img {
+            height: 36px;
+            width: auto;
+        }
+
+        .footer__links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer__links a {
+            font-size: 0.8rem;
+            color: #555555;
+            transition: color 0.3s ease;
+        }
+
+        .footer__links a:hover {
+            color: #ffffff;
+        }
+
+        .footer__copy {
+            font-size: 0.75rem;
+            color: #444444;
+        }
+
+        /* ============================================
+           FAQ SECTION
+           ============================================ */
+        .faq {
+            padding: 100px 0;
+            background: #0a0a0a;
+        }
+
+        .faq__header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .faq__header .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #e8511f;
+            margin-bottom: 20px;
+        }
+
+        .faq__list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq__item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .faq__question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-align: left;
+            padding: 24px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .faq__question:hover {
+            color: #e8511f;
+        }
+
+        .faq__question .icon {
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            color: #e8511f;
+        }
+
+        .faq__item.active .faq__question .icon {
+            transform: rotate(45deg);
+        }
+
+        .faq__answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq__item.active .faq__answer {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+
+        .faq__answer p {
+            color: #888888;
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero__image {
+                order: -1;
+            }
+
+            .hero__image img {
+                max-height: 50vh;
+            }
+
+            .hero__ctas {
+                justify-content: center;
+            }
+
+            .problem__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .solution__pillars {
+                grid-template-columns: 1fr;
+            }
+
+            .proof__transformations {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .lead-magnet .container {
+                grid-template-columns: 1fr;
+            }
+
+            .authority .container {
+                grid-template-columns: 1fr;
+            }
+
+            .authority__image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .endorsements__grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 80px 0;
+            }
+
+            .navbar__links {
+                display: none;
+            }
+
+            .navbar__mobile-toggle {
+                display: block;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 100px 0 60px;
+            }
+
+            .hero__image img {
+                max-height: 40vh;
+            }
+
+            .problem__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .proof__transformations {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 60px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .credibility__logos {
+                gap: 28px;
+            }
+
+            .credibility__logos img {
+                height: 22px;
+            }
+
+            .lead-magnet__form {
+                padding: 32px 24px;
+            }
+
+            .offer__card-body {
+                padding: 32px 24px;
+            }
+
+            .offer__card-header {
+                padding: 24px;
+            }
+
+            .offer__card-footer {
+                padding: 0 24px 36px;
+            }
+
+            .authority__stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+
+            .stat__number {
+                font-size: 2rem;
+            }
+
+            .footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero__ctas {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero__ctas .btn {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .btn {
+                padding: 16px 32px;
+                font-size: 0.85rem;
+            }
+
+            .btn--large {
+                padding: 18px 40px;
+            }
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            opacity: 0;
+            animation: fadeInUp 0.7s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================
+         NAVBAR
+         ======================================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container container--wide">
+            <a href="#" class="navbar__logo">
+                <img src="https://jaycampbell.com/wp-content/uploads/2024/10/JC-logo-white.png" alt="Jay Campbell" loading="eager">
+            </a>
+            <ul class="navbar__links">
+                <li><a href="#problem">The Problem</a></li>
+                <li><a href="#solution">The Program</a></li>
+                <li><a href="#proof">Results</a></li>
+                <li><a href="#about">About Jay</a></li>
+                <li><a href="#offer">Pricing</a></li>
+            </ul>
+            <div class="navbar__cta">
+                <a href="#offer" class="btn btn--primary">Apply Now</a>
+            </div>
+            <button class="navbar__mobile-toggle" aria-label="Toggle menu" onclick="document.querySelector('.navbar__links').classList.toggle('mobile-open')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         HERO SECTION
+         ======================================== -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__badge animate-in">
+                    <span>For High-Performing Men 35-60</span>
+                </div>
+                <h1 class="hero__title animate-in delay-1">
+                    Your Doctor Says You're <span class="highlight">"Normal."</span><br>
+                    You Know You're Not.
+                </h1>
+                <p class="hero__subtitle animate-in delay-2">
+                    The premium optimization protocol for men who are done feeling like a shell of who they used to be. Reclaim the energy, focus, and drive that made you unstoppable.
+                </p>
+                <p class="hero__proof animate-in delay-3">
+                    500+ men optimized &bull; 5x best-selling author &bull; 10+ years of results
+                </p>
+                <div class="hero__ctas animate-in delay-4">
+                    <a href="#offer" class="btn btn--primary btn--large">Apply to Join FOH</a>
+                    <a href="#free-assessment" class="btn btn--secondary">Free T Assessment</a>
+                </div>
+            </div>
+            <div class="hero__image animate-in delay-2">
+                <img src="https://jaycampbell.com/wp-content/uploads/2025/01/JayProfileJackets2.webp" alt="Jay Campbell — Testosterone and Health Optimization Expert" loading="eager">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CREDIBILITY BAR
+         ======================================== -->
+    <section class="credibility">
+        <div class="container container--wide">
+            <p class="credibility__label">As Featured In</p>
+            <div class="credibility__logos">
+                <img src="https://jaycampbell.com/wp-content/uploads/2025/01/forbes-logo.webp" alt="Forbes">
+                <img src="https://jaycampbell.com/wp-content/uploads/2025/01/ABC-logo-MConverter.eu_.webp" alt="ABC">
+                <img src="https://jaycampbell.com/wp-content/uploads/2025/01/Logo-Fox-News-264192247-1.webp" alt="Fox News">
+                <img src="https://jaycampbell.com/wp-content/uploads/2025/01/NBC-logo.webp" alt="NBC">
+                <img src="https://jaycampbell.com/wp-content/uploads/2025/01/espn-940-radio-logo-16585s62-1.webp" alt="ESPN Radio">
+                <img src="https://jaycampbell.com/wp-content/uploads/2025/01/MF-1.webp" alt="Men's Fitness">
+                <img src="https://jaycampbell.com/wp-content/uploads/2025/01/bi-1.webp" alt="Business Insider">
+                <img src="https://jaycampbell.com/wp-content/uploads/2025/01/MinfPump-cut.webp" alt="MindPump">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PROBLEM / AGITATION SECTION
+         ======================================== -->
+    <section class="problem" id="problem">
+        <div class="container">
+            <div class="problem__header">
+                <p class="section-label">Sound Familiar?</p>
+                <h2>You've Tried Everything.<br>Nothing Has Worked.</h2>
+            </div>
+
+            <div class="problem__grid">
+                <div class="problem__card">
+                    <div class="problem__card-icon">&#x26A1;</div>
+                    <h3>The Energy Crash</h3>
+                    <p>You used to power through 14-hour days. Now you're reaching for your third coffee by noon and still dragging. The drive that built your career is gone.</p>
+                </div>
+                <div class="problem__card">
+                    <div class="problem__card-icon">&#x1F9E0;</div>
+                    <h3>The Brain Fog</h3>
+                    <p>You walk into rooms and forget why. Decisions that used to take seconds now take days. The mental sharpness that made you dangerous is buried under a haze.</p>
+                </div>
+                <div class="problem__card">
+                    <div class="problem__card-icon">&#x2696;</div>
+                    <h3>The Unexplained Weight</h3>
+                    <p>Same diet. Same effort. But the gut keeps growing and the muscle keeps disappearing. Your body doesn't respond the way it used to — and you don't recognize the man in the mirror.</p>
+                </div>
+                <div class="problem__card">
+                    <div class="problem__card-icon">&#x1F3E5;</div>
+                    <h3>The "Normal" Lab Results</h3>
+                    <p>Your doctor ran basic bloodwork and told you everything looks "fine." But you feel like garbage. They're measuring against sick people — not optimized men.</p>
+                </div>
+                <div class="problem__card">
+                    <div class="problem__card-icon">&#x1F494;</div>
+                    <h3>Your Wife Has Noticed</h3>
+                    <p>The intimacy has dropped. The confidence has faded. She sees it. You see it. The man she married is in there somewhere — but he's been slowly disappearing.</p>
+                </div>
+                <div class="problem__card">
+                    <div class="problem__card-icon">&#x1F6AB;</div>
+                    <h3>The Cheap Fixes Failed</h3>
+                    <p>Supplements from Amazon. Random advice from Reddit. A GP who knows nothing about optimization. You've wasted years and thousands on half-measures that never moved the needle.</p>
+                </div>
+            </div>
+
+            <div class="problem__quote">
+                <p>"The guys who find me have been suffering for years. Their doctor told them their levels are 'normal' when they feel like garbage. They're exhausted, they can't think straight, their wife is noticing. They come to me because I tell the truth about optimization."</p>
+                <cite>— Jay Campbell</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SOLUTION SECTION
+         ======================================== -->
+    <section class="solution" id="solution">
+        <div class="container">
+            <div class="solution__header">
+                <p class="section-label">The Full Protocol</p>
+                <h2>Fully Optimized Health:<br>This Is Not Another Program</h2>
+                <p>This is the premium, no-compromise coaching system for men who want the complete protocol — hormone optimization, body recomposition, peptide therapy, and mental performance — with direct access to the most trusted name in men's health optimization.</p>
+            </div>
+
+            <div class="solution__pillars">
+                <div class="pillar">
+                    <span class="pillar__number">01</span>
+                    <div>
+                        <h3>Testosterone &amp; Hormone Optimization</h3>
+                        <p>Not the cookie-cutter TRT your anti-aging clinic offers. A fully personalized protocol built on over a decade of research, refined by working with thousands of men. We optimize your entire hormonal cascade — not just testosterone.</p>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <span class="pillar__number">02</span>
+                    <div>
+                        <h3>Therapeutic Peptide Protocols</h3>
+                        <p>Learn from the #1 peptide expert in the world. Cutting-edge peptide stacking strategies for fat loss, muscle preservation, cognitive enhancement, sleep quality, and longevity — backed by real science, not bro-science.</p>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <span class="pillar__number">03</span>
+                    <div>
+                        <h3>Body Recomposition &amp; Fat Loss</h3>
+                        <p>Strategic nutrition and training protocols designed for men 35+ whose metabolism has shifted. Drop body fat while preserving muscle — without extreme dieting or living in the gym.</p>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <span class="pillar__number">04</span>
+                    <div>
+                        <h3>Mental Performance &amp; Cognitive Edge</h3>
+                        <p>Optimize your neurotransmitters, sleep architecture, and stress response. Regain the mental clarity, decisiveness, and emotional control that made you a top performer.</p>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <span class="pillar__number">05</span>
+                    <div>
+                        <h3>Private Community &amp; Accountability</h3>
+                        <p>Join 500+ men who are on the same path. A private community of high-performers who share protocols, results, and hold each other accountable. No trolls. No noise. Just optimized men.</p>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <span class="pillar__number">06</span>
+                    <div>
+                        <h3>Direct Access to Jay Campbell</h3>
+                        <p>This isn't a course you watch alone. Get direct access to Jay through live group calls, Q&A sessions, and community interaction. Your questions get answered by the expert — not a VA.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="solution__cta">
+                <a href="#offer" class="btn btn--primary btn--large">See Pricing &amp; Apply</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SOCIAL PROOF / TRANSFORMATIONS
+         ======================================== -->
+    <section class="proof" id="proof">
+        <div class="container">
+            <div class="proof__header">
+                <p class="section-label">Average to Optimized</p>
+                <h2>Real Men. Real Transformations.</h2>
+                <p>These are men who felt exactly like you do right now. They made the decision. Here's what happened next.</p>
+            </div>
+
+            <div class="proof__transformations">
+                <div class="transformation">
+                    <img src="https://jaycampbell.com/wp-content/uploads/2024/10/TA-2.png" alt="FOH Member Transformation" loading="lazy">
+                </div>
+                <div class="transformation">
+                    <img src="https://jaycampbell.com/wp-content/uploads/2024/10/KC-1.png" alt="FOH Member Transformation" loading="lazy">
+                </div>
+                <div class="transformation">
+                    <img src="https://jaycampbell.com/wp-content/uploads/2024/10/JL-2.png" alt="FOH Member Transformation" loading="lazy">
+                </div>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial__text">"I learned more from Jay Campbell for free, than all of the 'expert' doctors combined. So I bought the book, just to pay for all I have learned. Then after reading it cover to cover, I realized the price doesn't begin to cover the value. I adopted what I could, and am having great results."</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__author-avatar">D</div>
+                        <div>
+                            <p class="testimonial__author-name">Dave</p>
+                            <p class="testimonial__author-detail">FOH Member</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial__text">"I'm a functional medicine nurse practitioner that specializes in hormone optimization and peptide therapy. I attend the top medical conferences in the US every year and don't get the depth and range of information I learn from following Jay's work."</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__author-avatar">AF</div>
+                        <div>
+                            <p class="testimonial__author-name">Angela Fernandez</p>
+                            <p class="testimonial__author-detail">Functional Medicine NP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial__text">"Without him, I would be a depressed overweight 55yr old instead of a lean mean fighting machine at her lowest weight since high school and with the nice shoulders and flat belly I always dreamed of! When he recommends something, start using it."</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__author-avatar">SS</div>
+                        <div>
+                            <p class="testimonial__author-name">Susan Schexnayder</p>
+                            <p class="testimonial__author-detail">FOH Member</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial__text">"Jay is the ultimate lab rat and biohacker. A man on a mission to enhance people's lives in all areas including Health. With everything he does he researches and uses himself to test what works and what is most effective. The ultimate cutting edge information."</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__author-avatar">MG</div>
+                        <div>
+                            <p class="testimonial__author-name">Morton Guyot</p>
+                            <p class="testimonial__author-detail">FOH Member</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial__text">"As a Marine veteran, I had to reach out and thank you. The highest form of courage is moral courage. This is the courage you have displayed and it's the courage that really separates the men from the boys. Thank you and Semper Fidelis."</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__author-avatar">JR</div>
+                        <div>
+                            <p class="testimonial__author-name">John Robles</p>
+                            <p class="testimonial__author-detail">Marine Veteran</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial__text">"The shift you are making into the spiritual space is going to help a lot of men and women, like me. Your recent podcasts have sparked my learning and helped me tremendously in letting go of bitterness. Keep it up brother. You're doing life changing work."</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__author-avatar">RK</div>
+                        <div>
+                            <p class="testimonial__author-name">Ryan Kolden</p>
+                            <p class="testimonial__author-detail">FOH Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         EXPERT ENDORSEMENTS
+         ======================================== -->
+    <section class="endorsements">
+        <div class="container">
+            <div class="endorsements__header">
+                <p class="section-label">What the Experts Say About Jay</p>
+                <h2>Trusted by Leading Doctors &amp; Practitioners</h2>
+            </div>
+            <div class="endorsements__grid">
+                <div class="endorsement-img">
+                    <img src="https://jaycampbell.com/wp-content/uploads/2024/10/DR1.png" alt="Doctor endorsement of Jay Campbell" loading="lazy">
+                </div>
+                <div class="endorsement-img">
+                    <img src="https://jaycampbell.com/wp-content/uploads/2024/10/DR2.png" alt="Doctor endorsement of Jay Campbell" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         LEAD MAGNET SECTION
+         ======================================== -->
+    <section class="lead-magnet" id="free-assessment">
+        <div class="container">
+            <div class="lead-magnet__content">
+                <p class="section-label">Free Assessment</p>
+                <h2>10 Signs Your Doctor Is Wrong<br>About Your T Levels</h2>
+                <p>Most men are walking around with testosterone levels that would have been considered clinically low 20 years ago — but today's "reference ranges" hide the truth. This assessment reveals what your doctor isn't telling you.</p>
+                <ul class="lead-magnet__list">
+                    <li>The lab ranges your doctor uses are based on sick populations — not optimal men</li>
+                    <li>Why "normal" testosterone at 40 is 30% lower than "normal" was in 1990</li>
+                    <li>The 10 clinical warning signs that your hormones are sabotaging your performance</li>
+                    <li>The exact blood markers to request that most GPs never order</li>
+                    <li>Jay's personal protocol checklist for evaluating your hormonal health</li>
+                </ul>
+            </div>
+            <div class="lead-magnet__form">
+                <h3>Get Your Free T Assessment</h3>
+                <p class="form-subtitle">Instant access. No spam. Unsubscribe anytime.</p>
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Check your email for your free assessment.');">
+                    <div class="form-group">
+                        <input type="text" name="first_name" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Send Me the Assessment</button>
+                    <p class="form-disclaimer">Join 45,000+ men on Jay's optimized email list. We respect your privacy.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         OFFER / PRICING SECTION
+         ======================================== -->
+    <section class="offer" id="offer">
+        <div class="container">
+            <div class="offer__header">
+                <p class="section-label">The Investment</p>
+                <h2>Fully Optimized Health Membership</h2>
+                <p>This is for men who are done with half-measures. If you want cheap, watch free YouTube videos. This is for men who want the full protocol, accountability, and direct access to Jay.</p>
+            </div>
+
+            <div class="offer__card">
+                <div class="offer__card-header">
+                    <h3>Fully Optimized Health — Elite Membership</h3>
+                    <p class="offer-subtitle">The complete optimization system for high-performing men</p>
+                </div>
+                <div class="offer__card-body">
+                    <ul class="offer__includes">
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span><strong>Personalized Hormone Optimization Protocol</strong> — Custom TRT, peptide, and supplement stacking designed for your specific bloodwork and goals</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span><strong>Private Community Access</strong> — Join 500+ high-performing men sharing protocols, results, and accountability in a noise-free environment</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span><strong>Live Group Coaching Calls with Jay</strong> — Get your questions answered directly by Jay, not a VA or junior coach</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span><strong>Complete Peptide Education Library</strong> — From the #1 peptide expert in the world. Protocols, stacking guides, and sourcing recommendations</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span><strong>Body Recomposition Blueprints</strong> — Nutrition and training frameworks built for men 35+ who want to drop fat and build lean muscle</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span><strong>Bloodwork Interpretation Guidance</strong> — Learn which markers actually matter and what optimal ranges look like (not just "normal")</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span><strong>Cognitive &amp; Sleep Optimization</strong> — Protocols for mental clarity, deep sleep, and sustained focus throughout your day</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span><strong>Access to Jay's Recommended Providers</strong> — Vetted clinics, pharmacies, and peptide sources that Jay personally trusts</span>
+                        </li>
+                    </ul>
+
+                    <div class="offer__price">
+                        <p class="offer__price-label">Starting Investment</p>
+                        <p class="offer__price-amount">$5,000</p>
+                        <p class="offer__price-period">One-time entry &bull; Ongoing membership included</p>
+                        <p class="offer__price-note">Payment plans available for qualified applicants</p>
+                    </div>
+                </div>
+                <div class="offer__card-footer">
+                    <a href="#apply" class="btn btn--primary btn--large">Apply for FOH Membership</a>
+                    <p class="guarantee">Limited spots available. Application required to ensure fit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         AUTHORITY / ABOUT SECTION
+         ======================================== -->
+    <section class="authority" id="about">
+        <div class="container">
+            <div class="authority__image">
+                <img src="https://jaycampbell.com/wp-content/uploads/2024/10/jaycampbell.com-22.jpg" alt="Jay Campbell and Monica Campbell — Living Proof of Optimization" loading="lazy">
+            </div>
+            <div class="authority__content">
+                <p class="section-label">Your Coach</p>
+                <h2>Jay Campbell:<br>Living Proof for Over a Decade</h2>
+                <p>This is what optimization looks like at 55. Jay Campbell is a 5x international best-selling author, the world's leading voice on therapeutic testosterone and peptide optimization, and the creator of Fully Optimized Health.</p>
+                <p>He's not a theorist sitting behind a desk. He's been doing this for over a decade, has helped thousands of men get their testosterone optimized, drop body fat, and get their minds right. Every protocol he teaches, he's tested on himself first.</p>
+                <p>Jay has been featured in Forbes, Fox News, NBC, ABC, ESPN, Men's Fitness, and Business Insider. His books — including the bestselling TOT Bible — have become the gold standard for men's hormonal optimization.</p>
+                <p><strong>When Jay talks about optimization, he doesn't just preach it. He's living it.</strong></p>
+
+                <div class="authority__stats">
+                    <div class="stat">
+                        <p class="stat__number">180K+</p>
+                        <p class="stat__label">YouTube Subscribers</p>
+                    </div>
+                    <div class="stat">
+                        <p class="stat__number">5</p>
+                        <p class="stat__label">Best-Selling Books</p>
+                    </div>
+                    <div class="stat">
+                        <p class="stat__number">10+</p>
+                        <p class="stat__label">Years in the Field</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FAQ SECTION
+         ======================================== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq__header">
+                <p class="section-label">Frequently Asked Questions</p>
+                <h2>Questions Before You Decide</h2>
+            </div>
+            <div class="faq__list">
+                <div class="faq__item">
+                    <button class="faq__question" onclick="this.parentElement.classList.toggle('active')">
+                        Who is Fully Optimized Health for?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq__answer">
+                        <p>FOH is designed for men ages 35-60 who are high earners experiencing declining energy, brain fog, weight gain, or low testosterone. Our best clients are men making $150K+ who've tried everything their GP suggested and still feel like a shell of who they used to be. They're not broke — they just need the right protocol and the right guide.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" onclick="this.parentElement.classList.toggle('active')">
+                        Why $5,000? Can't I find this information free online?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq__answer">
+                        <p>You can find fragments of information everywhere — Reddit threads, random YouTube videos, supplement company marketing. But that's exactly the problem. You've probably already wasted years and thousands of dollars on scattered, unvetted advice. FOH gives you the complete, organized system — plus direct access to Jay and a community of 500+ men who are implementing it. This is the premium option for men who value their time and want proven results.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" onclick="this.parentElement.classList.toggle('active')">
+                        Do I need to already be on TRT to join?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq__answer">
+                        <p>No. Whether you're considering TRT, already on it and not getting results, or exploring peptides and natural optimization first, FOH meets you where you are. Jay will help you understand your options and build the right protocol for your situation.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" onclick="this.parentElement.classList.toggle('active')">
+                        How is this different from Jay's free content?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Jay's free content teaches principles. FOH gives you the personalized application — specific protocols, direct Q&A access, a private community of high-caliber men, live coaching calls, and accountability. It's the difference between reading a map and having a guide walk you through the terrain.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" onclick="this.parentElement.classList.toggle('active')">
+                        How quickly will I see results?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Most members report noticeable improvements in energy and mental clarity within the first 2-4 weeks. Body composition changes typically become visible within 8-12 weeks. Hormonal optimization is a process — not a quick fix — but the trajectory shift happens fast when you have the right protocol.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" onclick="this.parentElement.classList.toggle('active')">
+                        Is there a payment plan available?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Yes. Payment plans are available for qualified applicants. Details will be discussed after your application is reviewed. We want to remove friction for the right men — but this is an investment in your health, not a discount program.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FINAL CTA
+         ======================================== -->
+    <section class="final-cta" id="apply">
+        <div class="container container--narrow">
+            <h2>Stop Settling for "Normal."<br>Get <span style="color: #e8511f;">Fully Optimized.</span></h2>
+            <p>You already know something is off. You've known for a while. The question isn't whether you need this — it's how much longer you're willing to wait.</p>
+            <a href="#offer" class="btn btn--primary btn--large">Apply for FOH Now</a>
+            <p class="final-cta__note">Limited spots. Application required. Not for everyone — and that's the point.</p>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+    <footer class="footer">
+        <div class="container container--wide">
+            <a href="#" class="footer__logo">
+                <img src="https://jaycampbell.com/wp-content/uploads/2024/10/JC-logo-white.png" alt="Jay Campbell">
+            </a>
+            <ul class="footer__links">
+                <li><a href="https://jaycampbell.com/terms-of-use/" target="_blank">Terms of Use</a></li>
+                <li><a href="https://jaycampbell.com/privacy-policy/" target="_blank">Privacy Policy</a></li>
+                <li><a href="https://jaycampbell.com/disclosure/" target="_blank">Disclosure</a></li>
+                <li><a href="https://jaycampbell.com/contact/" target="_blank">Contact</a></li>
+            </ul>
+            <p class="footer__copy">&copy; 2026 Jay C. Campbell — All Rights Reserved. This site is not a part of the Facebook/Meta website or Facebook/Meta Inc.</p>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         JAVASCRIPT
+         ======================================== -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 100) {
+                navbar.style.padding = '8px 0';
+                navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.08)';
+            } else {
+                navbar.style.padding = '12px 0';
+                navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.06)';
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 80;
+                    const position = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: position, behavior: 'smooth' });
+                }
+                // Close mobile menu if open
+                document.querySelector('.navbar__links').classList.remove('mobile-open');
+            });
+        });
+
+        // Intersection Observer for fade-in animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.querySelectorAll('.problem__card, .pillar, .testimonial, .transformation, .stat').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- Mobile menu styles -->
+    <style>
+        .navbar__links.mobile-open {
+            display: flex !important;
+            position: fixed;
+            top: 66px;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.97);
+            flex-direction: column;
+            padding: 24px;
+            gap: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            z-index: 999;
+        }
+
+        @media (max-width: 768px) {
+            .navbar__links.mobile-open a {
+                font-size: 1rem;
+                padding: 8px 0;
+            }
+        }
+    </style>
+</body>
+</html>

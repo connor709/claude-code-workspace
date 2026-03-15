@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nucleus-preview",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "require('http').createServer((q,r)=>{let p=q.url==='/'?'index.html':q.url.replace(/^\\//,'');const f=require('path').join('nucleus-genomics-funnel',p);const ext=f.split('.').pop();const types={html:'text/html',css:'text/css',js:'application/javascript',png:'image/png',jpg:'image/jpeg',svg:'image/svg+xml'};require('fs').readFile(f,(e,d)=>{if(e){r.writeHead(404);r.end('Not found')}else{r.writeHead(200,{'Content-Type':types[ext]||'application/octet-stream'});r.end(d)}})}).listen(3847)"],
+      "port": 3847
+    },
+    {
+      "name": "nucleus-ads",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "require('http').createServer((q,r)=>{let p=q.url==='/'?'index.html':q.url.replace(/^\\//,'');const f=require('path').join('nucleus-ads',p);const ext=f.split('.').pop();const types={html:'text/html',css:'text/css',js:'application/javascript',png:'image/png',jpg:'image/jpeg',svg:'image/svg+xml'};require('fs').readFile(f,(e,d)=>{if(e){r.writeHead(404);r.end('Not found')}else{r.writeHead(200,{'Content-Type':types[ext]||'application/octet-stream'});r.end(d)}})}).listen(3456)"],
+      "port": 3456
+    }
+  ]
+}

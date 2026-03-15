@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:mynucleus.com)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(gh auth status)",
+      "Bash(git --version)",
+      "Bash(git config --global user.name)",
+      "Bash(git config --global user.email)",
+      "Bash(git config --global credential.helper)",
+      "Bash(git credential-manager --version)",
+      "Bash(git credential-manager-core --version)",
+      "Bash(curl -s -H \"Authorization: token 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\" -H \"Accept: application/vnd.github.v3+json\" https://api.github.com/user)",
+      "Bash(curl -s -H \"Authorization: token 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\" -H \"Accept: application/vnd.github.v3+json\" https://api.github.com/user/repos -d '{\"\"name\"\":\"\"nucleus-genomics-funnel\"\",\"\"description\"\":\"\"High-converting landing page funnel for Nucleus Genomics\"\",\"\"homepage\"\":\"\"https://connor709.github.io/nucleus-genomics-funnel/\"\",\"\"auto_init\"\":false,\"\"private\"\":false}')",
+      "Bash(curl -s -H \"Authorization: token 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\" -H \"Accept: application/vnd.github.v3+json\" https://api.github.com/repos/connor709/nucleus-genomics-funnel)",
+      "Bash(curl -s -X POST -H \"Authorization: token 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\" -H \"Accept: application/vnd.github.v3+json\" https://api.github.com/repos/connor709/nucleus-genomics-funnel/pages -d '{\"\"source\"\":{\"\"branch\"\":\"\"main\"\",\"\"path\"\":\"\"/\"\"}}')",
+      "Bash(curl -s -H \"Authorization: token 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\" -H \"Accept: application/vnd.github.v3+json\" https://api.github.com/repos/connor709/nucleus-genomics-funnel/pages)",
+      "Bash(printenv)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3456/)",
+      "Bash(python -m http.server 3456)"
+    ]
+  }
+}

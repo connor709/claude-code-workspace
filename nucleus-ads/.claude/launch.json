@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nucleus-ads",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "3456", "--directory", "C:/Users/conno/Documents/Claude/nucleus-ads"],
+      "port": 3456
+    }
+  ]
+}
